@@ -15,31 +15,31 @@
     <link href="./output.css" rel="stylesheet" />
     <title>Pomodoro</title>
   </head>
-  <body
-    class="font-mono bg-background flex justify-center items-center h-lvh"
-  >
+  <body class="font-mono bg-background flex justify-center items-center h-lvh">
     <!-- Timer Container -->
     <div
       class="bg-primary max-w-[560px] max-h-[560px] w-full h-auto border-4 border-black rounded-2xl p-6 pt-12 pb-12 shadow-2xl m-3 flex-col flex justify-center items-center gap-12"
     >
       <!-- Timer Display -->
       <div
-        class="bg-white max-w-[453px] max-h-[261px] w-full h-auto border-2 border-black rounded-3xl p-6 shadow-xl  text-center"
+        class="bg-white max-w-[453px] max-h-[261px] w-full h-auto border-2 border-black rounded-3xl p-6 shadow-xl text-center"
       >
         <!-- Timer Title -->
         <p class="text-black text-2xl font-medium">SESSION</p>
         <!-- Timer Value -->
-        <h1 class="text-black font-bold text-6xl lg:text-8xl mb-4">25:00</h1>
+        <h1 id="time-display" class="text-black font-bold text-6xl lg:text-8xl mb-4">25:00</h1>
 
         <!-- Timer Controls -->
         <div class="flex justify-center gap-4">
           <button
+          id="start-timer"
             aria-label="Start Timer"
             class="bg-white border text-xl lg:text-2xl font-normal border-black text-black p-2.5 rounded-xl hover:bg-gray-100"
           >
             Start
           </button>
           <button
+          id="reset-timer"
             aria-label="Reset Timer"
             class="bg-white border text-xl lg:text-2xl font-normal border-black text-black p-2.5 rounded-xl hover:bg-gray-100"
           >
@@ -49,11 +49,9 @@
       </div>
 
       <!-- Length Controls -->
-      <div class="flex justify-around  gap-6">
+      <div class="flex justify-around gap-6">
         <!-- Break Length Control -->
-        <div
-          class="bg-[#96B8B8] rounded-lg p-4 shadow-xl text-center"
-        >
+        <div class="bg-[#96B8B8] rounded-lg p-4 shadow-xl text-center">
           <div class="flex justify-between items-center mb-2">
             <button
               aria-label="Decrease Break Length"
@@ -69,13 +67,11 @@
               +
             </button>
           </div>
-          <p class="text-black text-2xl px-3 ">Break Length</p>
+          <p class="text-black text-2xl px-3">Break Length</p>
         </div>
 
         <!-- Session Length Control -->
-        <div
-          class="bg-[#96B8B8] rounded-lg p-4 shadow-xl text-center "
-        >
+        <div class="bg-[#96B8B8] rounded-lg p-4 shadow-xl text-center">
           <div class="flex justify-between items-center mb-2">
             <button
               aria-label="Decrease Session Length"
@@ -95,5 +91,6 @@
         </div>
       </div>
     </div>
+    <script src="../src/script.js"></script>
   </body>
 </html>
